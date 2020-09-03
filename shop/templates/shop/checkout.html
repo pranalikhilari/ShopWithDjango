@@ -7,6 +7,11 @@
         <div class="my-4">
             <ul class="list-group" id="items">
             </ul>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb mt-3" style="background-color:peachpuff;">
+                  <li class="breadcrumb-item active"style="margin-left:100px" aria-current="page"><b>Thanks for shopping! Please enter the below details to confirm your order.Your Cart total is Rs: <span id="TotalPrice"></span></b></li>
+                </ol>
+              </nav>              
         </div>
     </div>
     <div class="col my-4">
@@ -63,6 +68,7 @@ if (localStorage.getItem('cart') == null) {
 }
 console.log(cart);
 var sum = 0;
+var TotalPrice=0;
 if ($.isEmptyObject(cart)) {
     //if object is empty
     mystr = `<p>Your cart is empty, please add some items to your cart before checking out!</p>`
@@ -71,6 +77,8 @@ if ($.isEmptyObject(cart)) {
     for (item in cart) {
         let name = cart[item][1];
         let qty = cart[item][0];
+        let itemprice = cart[item][2];
+        TotalPrice=TotalPrice+itemprice*qty;
         sum = sum + qty;
         mystr = `<li class="list-group-item d-flex justify-content-between align-items-center">
                     ${name}
@@ -80,6 +88,7 @@ if ($.isEmptyObject(cart)) {
     }
 }
 document.getElementById('cart').innerHTML = sum;
+document.getElementById('TotalPrice').innerHTML = TotalPrice;
 $('#itemsJson').val(JSON.stringify(cart));
 {% if thank %}
 alert('Thanks for ordering with us. Your order is is {{id}}. Use it to track your order using our order tracker');

@@ -56,7 +56,7 @@ ROOT_URLCONF = 'ShopWithDjango.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['ShopWithDjango/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
