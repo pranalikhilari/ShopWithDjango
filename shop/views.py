@@ -35,6 +35,7 @@ def contact(request):
     return render(request, 'shop/contact.html')
 
 
+
 def tracker(request):
     if request.method=="POST":
         orderId = request.POST.get('orderId', '')
@@ -54,6 +55,7 @@ def tracker(request):
             return HttpResponse('{}')
 
     return render(request, 'shop/tracker.html')
+
 
 
 def search(request):
