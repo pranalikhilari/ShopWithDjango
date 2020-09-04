@@ -17,6 +17,3 @@ Designed an e-commerce website wherein items can be added, removed, and modified
 - SQLite database
 
 
-- Go to your browser & type '127.0.0.1:8000' in the address bar
-- When running locally, SQLite database was used & static and media files were stored locally. 
-- Log in to the admin panel by going to '127.0.0.1:8000/admin' by using the credentials you created for the superuser
