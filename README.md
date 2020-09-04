@@ -3,12 +3,12 @@ Designed an e-commerce website wherein items can be added, removed, and modified
 can be redirected to the original product page. Additional functionality includes tracking the products shopped (only by authenticated users).
 
 
-#For Admin Login
+# For Admin Login
 Type The following command.
 python manage.py createsuperuser
 create a username and password for the superuser.
 
-#Built with
+# Built with
 Django
 Python
 JavaScript
