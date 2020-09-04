@@ -4,8 +4,7 @@ can be redirected to the original product page. Additional functionality include
 
 
 # For Admin Login
-Type The following command.
-python manage.py createsuperuser
+- python manage.py createsuperuser
 create a username and password for the superuser.
 
 # Built with
